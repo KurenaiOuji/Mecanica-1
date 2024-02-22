@@ -23,7 +23,7 @@ public class EnemyShip : MonoBehaviour
     {
         float x = r * Mathf.Cos(w0 * t + f0);
         float y = h * Mathf.Sin(w1 * t + f1);
-        float z = r * Mathf.Cos(w0 * t + f0);
+        float z = r * Mathf.Sin(w0 * t + f0);
         return new Vector3(x, y, z);
     }
 
