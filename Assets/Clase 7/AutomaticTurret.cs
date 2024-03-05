@@ -16,6 +16,13 @@ public class AutomaticTurret : MonoBehaviour
     private float V0;
     private float g = 9.81f;
 
+    private Camera cam;
+
+    void Start()
+    {
+        cam = Camera.main;   
+    }
+
     void Update()
     {
         TuretRotation();
@@ -25,6 +32,8 @@ public class AutomaticTurret : MonoBehaviour
         {
             Fire();
         }
+
+        SelectTarget();
     }
 
     void Fire()
@@ -89,5 +98,28 @@ public class AutomaticTurret : MonoBehaviour
         float dy = relativePosition.y;
 
         return new Vector2(dx, dy);
+    }
+
+    void SelectTarget()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.collider.CompareTag("Target"))
+                {
+                    HitTarget(hit.collider.transform);
+                }
+            }
+        }
+    }
+
+    void HitTarget(Transform obj)
+    {
+        Debug.Log("Target: " + obj.name);
+        target = obj;
     }
 }
