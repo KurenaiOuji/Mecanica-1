@@ -16,11 +16,18 @@ public class AutomaticTurret : MonoBehaviour
     private float V0;
     private float g = 9.81f;
 
+    public float bulletLife;
+
     private Camera cam;
 
     void Start()
     {
         cam = Camera.main;   
+    }
+
+    private void FixedUpdate()
+    {
+        SelectTarget();
     }
 
     void Update()
@@ -32,8 +39,6 @@ public class AutomaticTurret : MonoBehaviour
         {
             Fire();
         }
-
-        SelectTarget();
     }
 
     void Fire()
@@ -47,6 +52,7 @@ public class AutomaticTurret : MonoBehaviour
 
         bullet.GetComponent<KinematicBullet>().P0 = p0;
         bullet.GetComponent<KinematicBullet>().V0 = v0;
+        Destroy(bullet, bulletLife);
     }
 
     void TuretRotation()
