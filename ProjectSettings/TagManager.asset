@@ -10,6 +10,7 @@ TagManager:
   - P2
   - Limit
   - P3
+  - Arrow
   layers:
   - Default
   - TransparentFX
