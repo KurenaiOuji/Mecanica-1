@@ -11,11 +11,13 @@ TagManager:
   - Limit
   - P3
   - Arrow
+  - BowlLimit
+  - P4
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Bowl
   - Water
   - UI
   - 
