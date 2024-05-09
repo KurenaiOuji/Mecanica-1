@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
         if (collider.CompareTag("P1"))
         {
             P1 = false;
+            Destroy(collider.gameObject);
         }
 
         if (collider.CompareTag("P2"))

@@ -13,6 +13,8 @@ TagManager:
   - Arrow
   - BowlLimit
   - P4
+  - Ground
+  - Base
   layers:
   - Default
   - TransparentFX

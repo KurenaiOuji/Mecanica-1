@@ -5,7 +5,7 @@ using UnityEngine;
 public class BezierCurve : MonoBehaviour
 {
     private int curvePoints = 100;
-    private List<Transform> P = new List<Transform>();
+    public List<Transform> P = new List<Transform>();
     private int n;
 
     void Awake()

@@ -1522,7 +1522,7 @@ MonoBehaviour:
   - {fileID: 198575015}
   - {fileID: 2055939637}
   shootPoint: {fileID: 1090032799}
-  arrowPrefab: {fileID: 1153277197913589084, guid: e7027bcd3e51527498a1ffde5c2f715c, type: 3}
+  arrowPrefab: {fileID: 1153277197913589084, guid: 462b61499bc60654d8d393a0803ae8f1, type: 3}
   bowCompresion: 1
   arrowMaxSpeed: 100
   arrowMaxDisplacement: 10

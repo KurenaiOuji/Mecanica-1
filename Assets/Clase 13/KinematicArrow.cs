@@ -11,7 +11,6 @@ public class KinematicArrow : MonoBehaviour
 
     void Start()
     {
-        fired = false;
         GetComponent<TrailRenderer>().Clear();
         GetComponent<TrailRenderer>().emitting = false;
     }
